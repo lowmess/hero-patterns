@@ -1,0 +1,18 @@
+{
+  "name": "lowmess-patterns",
+  "version": "0.0.1",
+  "description": "Patterns for use on lowmess.com",
+  "scripts": {
+    "minify": "cssnano lowmess-patterns.css lowmess-patterns.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowmess/lowmess-patterns.git"
+  },
+  "author": "Alec Lomas",
+  "license": "MIT",
+  "devDependencies": {
+    "cssnano": "^3.8.0",
+    "cssnano-cli": "^1.0.5"
+  }
+}
