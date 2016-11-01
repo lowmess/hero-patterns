@@ -1,0 +1,1 @@
+export default const svgTemplate = `url('data:image/svg+xml,%3Csvg width="${width}" height="${height}" viewBox="${viewbox}" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23${fill}" fill-opacity="${opacity}" fill-rule="evenodd"%3E%3Cpath ${path}/%3E%3C/g%3E%3C/svg%3E');`
