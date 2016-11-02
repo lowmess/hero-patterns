@@ -1,12 +1,9 @@
 {
   "name": "hero-patterns",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "CSS & JS for setting patterns from heropatterns.com",
   "main": "index.js",
   "jsnext:main": "index.js",
-  "scripts": {
-    "css": "cssnano index.css dist/hero-patterns.min.css"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lowmess/hero-patterns.git"
@@ -14,10 +11,6 @@
   "author": "Alec Lomas",
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-es2015-rollup": "^1.2.0",
-    "cssnano": "^3.8.0",
-    "cssnano-cli": "^1.0.5",
-    "lodash-es": "^4.16.5",
-    "rollup": "^0.36.3"
+    "lodash-es": "^4.16.6"
   }
 }
