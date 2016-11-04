@@ -9,8 +9,5 @@
     "url": "git+https://github.com/lowmess/hero-patterns.git"
   },
   "author": "Alec Lomas",
-  "license": "MIT",
-  "devDependencies": {
-    "lodash-es": "^4.16.6"
-  }
+  "license": "MIT"
 }
