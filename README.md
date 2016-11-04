@@ -2,6 +2,8 @@
 
 Easily set background images from [Hero Patterns](http://heropatterns.com) with JavaScript.
 
+Each pattern from [Hero Patterns](http://heropatterns.com) has its own function. Each function returns the SVG data as a string wrapped in a `url()` function. The functions take two parameters: one for setting the fill color, the other for setting the fill opacity.
+
 # Usage
 
 ### Install
@@ -11,8 +13,6 @@ npm install --save hero-patterns
 ```
 
 ### Set `background-image` to "Tic Tac Toe" pattern
-
-Each pattern is represented as a function taking two arguments, one for fill color and the other for fill opacity.
 
 ```js
 import {ticTacToe} from 'hero-patterns'

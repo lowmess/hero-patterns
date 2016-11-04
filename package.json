@@ -1,7 +1,7 @@
 {
   "name": "hero-patterns",
-  "version": "0.1.1",
-  "description": "CSS & JS for setting patterns from heropatterns.com",
+  "version": "0.1.2",
+  "description": "Patterns from heropatterns.com exported as ES6 functions",
   "main": "index.js",
   "jsnext:main": "index.js",
   "repository": {
