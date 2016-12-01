@@ -3,7 +3,6 @@
   "version": "0.2.5",
   "description": "Patterns from heropatterns.com exported as ES6 functions",
   "main": "index.js",
-  "jsnext:main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lowmess/hero-patterns.git"
