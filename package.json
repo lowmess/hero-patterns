@@ -1,6 +1,6 @@
 {
   "name": "hero-patterns",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Patterns from heropatterns.com exported as ES6 functions",
   "main": "index.js",
   "repository": {
@@ -16,6 +16,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "version": "0.0.0-development"
+  }
 }
