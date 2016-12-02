@@ -1,12 +1,24 @@
 {
   "name": "hero-patterns",
-  "version": "0.3.0",
   "description": "Patterns from heropatterns.com exported as ES6 functions",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lowmess/hero-patterns.git"
+    "url": "https://github.com/lowmess/hero-patterns.git"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Alec Lomas",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "^1.2.0",
+    "semantic-release": "^6.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "version": "0.0.0-development"
 }
