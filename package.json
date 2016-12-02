@@ -12,8 +12,7 @@
   "author": "Alec Lomas",
   "license": "MIT",
   "devDependencies": {
-    "cz-conventional-changelog": "^1.2.0",
-    "semantic-release": "^6.3.2"
+    "cz-conventional-changelog": "^1.2.0"
   },
   "config": {
     "commitizen": {
