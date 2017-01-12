@@ -1,3 +1,4 @@
+export { overlappingHexagons } from './patterns/overlapping-hexagons.js'
 export { fourPointStars } from './patterns/four-point-stars.js'
 export { bamboo } from './patterns/bamboo.js'
 export { bathroomFloor } from './patterns/bathroom-floor.js'
