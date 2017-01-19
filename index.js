@@ -1,3 +1,8 @@
+export { temple } from './patterns/temple.js'
+export { stampCollection } from './patterns/stamp-collection.js'
+export { deathStar } from './patterns/death-star.js'
+export { churchOnSunday } from './patterns/church-on-sunday.js'
+export { iLikeFood } from './patterns/i-like-food.js'
 export { overlappingHexagons } from './patterns/overlapping-hexagons.js'
 export { fourPointStars } from './patterns/four-point-stars.js'
 export { bamboo } from './patterns/bamboo.js'
