@@ -1,3 +1,4 @@
+export { autumn } from './patterns/autumn.js'
 export { temple } from './patterns/temple.js'
 export { stampCollection } from './patterns/stamp-collection.js'
 export { deathStar } from './patterns/death-star.js'
