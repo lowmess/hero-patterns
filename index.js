@@ -1,3 +1,4 @@
+export { hexagons } from './patterns/hexagons.js'
 export { charlieBrown } from './patterns/charlie-brown.js'
 export { autumn } from './patterns/autumn.js'
 export { temple } from './patterns/temple.js'
