@@ -1,6 +1,6 @@
 {
   "name": "hero-patterns",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Patterns from heropatterns.com exported as ES6 functions",
   "main": "index.js",
   "repository": {
