@@ -1,3 +1,4 @@
+export { pianoMan } from './patterns/piano-man.js'
 export { pieFactory } from './patterns/pie-factory.js'
 export { dominos } from './patterns/dominos.js'
 export { hexagons } from './patterns/hexagons.js'
