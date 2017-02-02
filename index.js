@@ -1,3 +1,4 @@
+export { yyy } from './patterns/yyy.js'
 export { squares } from './patterns/squares.js'
 export { fallingTriangles } from './patterns/falling-triangles.js'
 export { pianoMan } from './patterns/piano-man.js'
