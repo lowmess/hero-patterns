@@ -1,3 +1,4 @@
+export { squares } from './patterns/squares.js'
 export { fallingTriangles } from './patterns/falling-triangles.js'
 export { pianoMan } from './patterns/piano-man.js'
 export { pieFactory } from './patterns/pie-factory.js'
