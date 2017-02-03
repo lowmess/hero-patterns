@@ -1,3 +1,4 @@
+export { graphPaper } from './patterns/graph-paper.js'
 export { yyy } from './patterns/yyy.js'
 export { squares } from './patterns/squares.js'
 export { fallingTriangles } from './patterns/falling-triangles.js'
