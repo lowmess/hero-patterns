@@ -1,3 +1,4 @@
+export { hideout } from './patterns/hideout.js'
 export { graphPaper } from './patterns/graph-paper.js'
 export { yyy } from './patterns/yyy.js'
 export { squares } from './patterns/squares.js'
