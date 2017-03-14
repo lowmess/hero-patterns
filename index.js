@@ -1,3 +1,4 @@
+export { cutout } from './patterns/cutout'
 export { hideout } from './patterns/hideout'
 export { graphPaper } from './patterns/graph-paper'
 export { yyy } from './patterns/yyy'
