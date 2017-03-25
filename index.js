@@ -1,3 +1,4 @@
+export { jupiter } from './patterns/jupiter'
 export { architect } from './patterns/architect'
 export { cutout } from './patterns/cutout'
 export { hideout } from './patterns/hideout'
