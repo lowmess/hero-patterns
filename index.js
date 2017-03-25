@@ -1,3 +1,4 @@
+export { texture } from './patterns/texture'
 export { jupiter } from './patterns/jupiter'
 export { architect } from './patterns/architect'
 export { cutout } from './patterns/cutout'
