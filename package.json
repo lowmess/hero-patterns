@@ -10,7 +10,7 @@
     "start": "yarn run browser_sync & NODE_ENV=development nodemon --exec 'yarn run test && yarn run build && browser-sync reload'",
     "browser_sync": "browser-sync start --server dist --no-ui --no-notify",
     "build": "rimraf dist && rollup -c -m && postcss site/main.css -o dist/bundle.css -c",
-    "build:prod": "cross-env NODE_ENV=production yarn run build && purifycss dist/bundle.css dist/index.html dist/bundle.js --out dist/bundle.css --min --info",
+    "build:min": "yarn run build && purifycss dist/bundle.css dist/index.html dist/bundle.js --out dist/bundle.css --min --info",
     "test": "eslint --ignore-path .gitignore . && stylelint site/*.css"
   },
   "repository": {
