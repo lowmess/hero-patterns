@@ -4,12 +4,14 @@ import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel'
 import replace from 'rollup-plugin-replace'
 import babili from 'rollup-plugin-babili'
-import fs from 'fs'
+import fs from 'fs-extra'
 
-if (!fs.existsSync('dist')) {
-  fs.mkdir('dist')
-  fs.createReadStream('./site/index.html').pipe(fs.createWriteStream('./dist/index.html'))
-}
+// delete 'dist', so that copying the index.html works
+if (fs.existsSync('dist')) fs.emptyDirSync('dist')
+// create 'dist', should always fire
+if (!fs.existsSync('dist')) fs.mkdirSync('dist')
+// copy index.html to 'dist'
+fs.copySync('./site/index.html', './dist/index.html')
 
 let plugs = [
   alias({
