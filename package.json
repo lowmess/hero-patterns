@@ -25,6 +25,7 @@
     "babel-preset-env": "^1.2.2",
     "babel-preset-es2015-rollup": "^3.0.0",
     "browser-sync": "^2.18.8",
+    "cross-env": "^3.2.4",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.10.0",
     "cz-conventional-changelog": "^1.2.0",
