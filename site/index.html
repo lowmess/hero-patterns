@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hero Patterns</title>
+    <link rel="stylesheet" href="/bundle.css">
+  </head>
+  <body class="sans-serif min-vh-100 dark-gray">
+    <header class="pv3 ph3 ph4-ns ph5-l">
+      <nav class="flex justify-between items-center">
+        <h1 class="f3 fw4 mv0 di flex-none">Hero Patterns</h1>
+        <ul class="list tr dn db-ns">
+          <li class="di mr3"><a class="link" href="https://github.com/lowmess/hero-patterns">GitHub</a></li>
+          <li class="di mr3"><a class="link" href="https://www.npmjs.com/package/hero-patterns">NPM</a></li>
+          <li class="di"><a class="link" href="http://heropatterns.com">Patterns</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="app">Loading...</div>
+    <main class="pv3 ph3 ph4-ns ph5-l">
+      <h2 class="f3 fw4 mv3">Installation</h2>
+      <pre lang="bash" class="ba b--black-10 br2 bg-light-gray pa3"><code class="code">yarn add hero-patterns</code></pre>
+      <h2 class="f3 fw4 mb3 mt4">Usage</h2>
+      <pre lang="js" class="ba b--black-10 br2 bg-light-gray pa3"><code class="code">import * as hero from 'hero-patterns'
+
+document.querySelector('.tech').style.backgroundImage = hero.circuitBoard('#bada55', 0.8)
+document.querySelector('.milkshake').style.backgroundImage = hero.iLikeFood('#c0ff33', 0.5)</code></pre>
+    </main>
+    <footer class="pv3 ph3 ph4-ns ph5-l">
+      <p class="mv3">Made by <a class="link fw5" href="https://github.com/lowmess">@lowmess</a></p>
+      <p class="mv3">Patterns by <a class="link fw5" href="https://twitter.com/steveschoger">@steveschoger</a></p>
+      <div class="mv3">
+        <span>Links</span>
+        <ul class="list di ml2 mv0 pa0">
+          <li class="di mr2"><a class="link fw5" href="https://github.com/lowmess/hero-patterns">GitHub</a></li>
+          <li class="di mr2"><a class="link fw5" href="https://www.npmjs.com/package/hero-patterns">NPM</a></li>
+          <li class="di mr2"><a class="link fw5" href="http://heropatterns.com">Patterns</a></li>
+          <li class="di mr2"><a class="link fw5" href="https://randoma11y.com">Random a11y</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="/bundle.js"></script>
+  </body>
+</html>

@@ -3,6 +3,16 @@
   "version": "0.6.5",
   "description": "Patterns from heropatterns.com exported as ES6 functions",
   "main": "index.js",
+  "engines": {
+    "node": "6.9.0"
+  },
+  "scripts": {
+    "start": "yarn run browser_sync & NODE_ENV=development nodemon --exec 'yarn run test && yarn run build && browser-sync reload'",
+    "browser_sync": "browser-sync start --server dist --no-ui --no-notify",
+    "build": "rimraf dist && rollup -c -m && postcss site/main.css -o dist/bundle.css -c",
+    "build:prod": "cross-env NODE_ENV=production yarn run build && purifycss dist/bundle.css dist/index.html dist/bundle.js --out dist/bundle.css --min --info",
+    "test": "eslint --ignore-path .gitignore . && stylelint site/*.css"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lowmess/hero-patterns.git"
@@ -10,7 +20,50 @@
   "author": "Alec Lomas",
   "license": "MIT",
   "devDependencies": {
-    "cz-conventional-changelog": "^1.2.0"
+    "autoprefixer": "^6.7.7",
+    "babel": "^6.23.0",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "browser-sync": "^2.18.8",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.10.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "nodemon": "^1.11.0",
+    "postcss": "^5.2.16",
+    "postcss-cli": "^3.0.0",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.2",
+    "postcss-import": "^9.1.0",
+    "postcss-nested": "^1.0.0",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-alias": "^1.2.1",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-babili": "^2.0.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "stylelint": "^7.9.0",
+    "stylelint-config-lowmess": "^0.1.0",
+    "tachyons": "^4.6.2",
+    "unfetch": "^2.1.2",
+    "vue": "^2.2.5"
+  },
+  "browserlist": [
+    "last 2 versions",
+    "> 5%"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-lowmess"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   },
   "config": {
     "commitizen": {
