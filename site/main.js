@@ -38,10 +38,10 @@ Vue.component('hero', {
       }
     },
     name () {
-      return this.fn.name
+      return this.fn.name.replace(/([A-Z])/g, ' $1')
     },
     ident () {
-      return this.fn.name.replace(' ', '-').toLowerCase()
+      return this.fn.name.replace(/([A-Z])/g, '-$1').toLowerCase()
     },
     func () {
       return `${this.fn.name}('${this.colorTwo}', 1)`
