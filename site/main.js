@@ -8,7 +8,8 @@ const roundTo = (increment, number) => Math.round(number / increment) * incremen
 const genAlpha = () => {
   // using 102 instead of 100 for the upper range
   // gives us a slightly larger chance of returning 1
-  let num = roundTo(5, random(25, 102))
+  // the same holds true for using 23 for the lower range
+  let num = roundTo(5, random(23, 102))
   return num === 100 ? 1 : parseFloat(`0.${num}`)
 }
 
