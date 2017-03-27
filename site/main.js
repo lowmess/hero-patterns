@@ -10,18 +10,18 @@ const genAlpha = () => {
   let num = roundTo(5, random(23, 102))
   return num === 100 ? 1 : parseFloat(`0.${num}`)
 }
-const setColor = obj => {
-  let colors = combo()
-  obj.colorOne = colors[0]
-  obj.colorTwo = colors[1]
-  obj.opacity = genAlpha()
-}
-const markup = obj => {
-  let name = obj.fn.name.replace(/([A-Z])/g, ' $1')
-  let ident = obj.fn.name.replace(/([A-Z])/g, '-$1').toLowerCase()
-  let func = `${obj.fn.name}('${obj.colorTwo}', ${obj.opacity})`
-  let style = `background-position: center; background-color: ${obj.colorOne}; background-image: ${obj.fn(obj.colorTwo, obj.opacity)}`
-  let template = `
+
+const markup = fn => {
+  // generate random color combination and opacity value
+  let [c1, c2] = combo()
+  let alpha = genAlpha()
+  // create strings from function name
+  let name = fn.name.replace(/([A-Z])/g, ' $1')
+  let ident = fn.name.replace(/([A-Z])/g, '-$1').toLowerCase()
+  let func = `${fn.name}('${c2}', ${alpha})`
+  // generate actual markup
+  let style = `background-position: center; background-color: ${c1}; background-image: ${fn(c2, alpha)}`
+  let html = `
     <div class="hero w-100 w-50-ns w-third-m w-25-l fl" id="${ident}">
       <div class="hide-child aspect-ratio aspect-ratio--16x9" style="${style}">
         <div class="child absolute absolute--fill bg-black-70 flex flex-column items-center justify-center pa3">
@@ -30,15 +30,11 @@ const markup = obj => {
         </div>
       </div>
     </div>`
-
-  let div = document.createElement('div')
-  div.innerHTML = template
-  return div.firstElementChild
+  let template = document.createElement('template')
+  template.innerHTML = html
+  return template.content.firstElementChild
 }
 
 for (let item in hero) {
-  let pattern = {}
-  setColor(pattern)
-  pattern.fn = hero[item]
-  document.querySelector('.heroes').appendChild(markup(pattern))
+  document.querySelector('.heroes').appendChild(markup(hero[item]))
 }
