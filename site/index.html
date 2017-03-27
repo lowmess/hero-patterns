@@ -18,12 +18,13 @@
         </ul>
       </nav>
     </header>
-    <div id="app"></div>
-    <main class="pa4">
-      <h2 class="f3 fw4 mv3">Installation</h2>
-      <pre class="pre ba b--black-10 br2 bg-light-gray pa3"><code class="language-bash code">yarn add hero-patterns</code></pre>
-      <h2 class="f3 fw4 mb3 mt4">Usage</h2>
-      <pre class="pre ba b--black-10 br2 bg-light-gray pa3"><code class="language-js code">import * as hero from 'hero-patterns'
+    <main>
+      <div class="cf heroes"></div>
+      <div class="pa4">
+        <h2 class="f3 fw4 mv3">Installation</h2>
+        <pre class="pre ba b--black-10 br2 bg-light-gray pa3"><code class="language-bash code">yarn add hero-patterns</code></pre>
+        <h2 class="f3 fw4 mb3 mt4">Usage</h2>
+        <pre class="pre ba b--black-10 br2 bg-light-gray pa3"><code class="language-js code">import * as hero from 'hero-patterns'
 
 // set fill & opacity
 document.querySelector('.tech').style.backgroundImage = hero.circuitBoard('#bada55', 0.5)
@@ -33,6 +34,7 @@ document.querySelector('.milkshake').style.backgroundImage = hero.iLikeFood('#c0
 
 // use default fill (#000) & opacity (0.8)
 document.querySelector('.dark-side').style.backgroundImage = hero.deathStar()</code></pre>
+      </div>
     </main>
     <footer class="pv3 ph4">
       <p class="mv3">Made by <a class="link fw5" href="https://github.com/lowmess">@lowmess</a></p>

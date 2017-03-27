@@ -1,9 +1,7 @@
-import alias from 'rollup-plugin-alias'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import json from 'rollup-plugin-json'
 import babel from 'rollup-plugin-babel'
-import replace from 'rollup-plugin-replace'
 import babili from 'rollup-plugin-babili'
 import fs from 'fs-extra'
 
@@ -15,9 +13,6 @@ if (!fs.existsSync('dist')) fs.mkdirSync('dist')
 fs.copySync('./site/index.html', './dist/index.html')
 
 let plugs = [
-  alias({
-    'vue': 'node_modules/vue/dist/vue.esm.js'
-  }),
   resolve({
     main: true,
     jsnext: true,
@@ -32,17 +27,8 @@ let plugs = [
 
 if (process.env.NODE_ENV === 'production') {
   plugs.push(
-    replace({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
     babili({
       comments: false
-    })
-  )
-} else {
-  plugs.push(
-    replace({
-      'process.env.NODE_ENV': JSON.stringify('development')
     })
   )
 }
