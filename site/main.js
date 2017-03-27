@@ -59,9 +59,9 @@ Vue.component('hero', {
     }
   },
   template: `
-    <div class="hero w-100 w-50-ns w-third-m w-25-l fl" :id="ident" @click="changeColor">
+    <div class="hero w-100 w-50-ns w-third-m w-25-l fl" :id="ident">
       <div class="hide-child aspect-ratio aspect-ratio--16x9" :style="style">
-        <div class="child absolute absolute--fill bg-black-70 flex flex-column items-center justify-center pa3">
+        <div class="child absolute absolute--fill bg-black-70 flex flex-column items-center justify-center pa3" @click.self="changeColor">
           <h3 class="white f5 f4-ns f3-l fw4 ttu tracked tc mt0 mb2">{{ name }}</h3>
           <code class="mt2 pv2 ph3 ba b--white br2 code white f5">{{ func }}</code>
         </div>
