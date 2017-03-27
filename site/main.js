@@ -4,6 +4,13 @@ import * as hero from '../'
 
 const patterns = []
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
+const roundTo = (increment, number) => Math.round(number / increment) * increment
+const genAlpha = () => {
+  // using 102 instead of 100 for the upper range
+  // gives us a slightly larger chance of returning 1
+  let num = roundTo(5, random(25, 102))
+  return num === 100 ? 1 : parseFloat(`0.${num}`)
+}
 
 // Could do this per-pattern but it felt wrong making 84 requests straight off the get-go
 fetch(`https://randoma11y.com/combos?page=${random(69, 420)}&per_page=${Object.keys(hero).length}`)
@@ -14,6 +21,7 @@ fetch(`https://randoma11y.com/combos?page=${random(69, 420)}&per_page=${Object.k
       let pattern = {}
       pattern.colorOne = json[count].color_one
       pattern.colorTwo = json[count].color_two
+      pattern.opacity = genAlpha()
       pattern.fn = hero[item]
 
       patterns.push(pattern)
@@ -22,11 +30,12 @@ fetch(`https://randoma11y.com/combos?page=${random(69, 420)}&per_page=${Object.k
   })
 
 Vue.component('hero', {
-  props: ['c1', 'c2', 'fn'],
+  props: ['c1', 'c2', 'alpha', 'fn'],
   data () {
     return {
       colorOne: this.c1,
-      colorTwo: this.c2
+      colorTwo: this.c2,
+      opacity: this.alpha
     }
   },
   computed: {
@@ -34,7 +43,7 @@ Vue.component('hero', {
       return {
         backgroundPosition: 'center',
         backgroundColor: this.colorOne,
-        backgroundImage: this.fn(this.colorTwo, 1)
+        backgroundImage: this.fn(this.colorTwo, this.opacity)
       }
     },
     name () {
@@ -44,7 +53,7 @@ Vue.component('hero', {
       return this.fn.name.replace(/([A-Z])/g, '-$1').toLowerCase()
     },
     func () {
-      return `${this.fn.name}('${this.colorTwo}', 1)`
+      return `${this.fn.name}('${this.colorTwo}', ${this.opacity})`
     }
   },
   methods: {
@@ -55,6 +64,7 @@ Vue.component('hero', {
         .then(json => {
           self.colorOne = json[0].color_one
           self.colorTwo = json[0].color_two
+          self.opacity = genAlpha()
         })
     }
   },
@@ -72,5 +82,5 @@ Vue.component('hero', {
 new Vue({ // eslint-disable-line
   el: '#app',
   data: { patterns },
-  template: `<div class="cf heroes"><hero v-for="item in patterns" :key="item.fn.name" :c1="item.colorOne" :c2="item.colorTwo" :fn="item.fn"></hero></div>`
+  template: `<div class="cf heroes"><hero v-for="item in patterns" :key="item.fn.name" :c1="item.colorOne" :c2="item.colorTwo" :alpha="item.opacity" :fn="item.fn"></hero></div>`
 })
