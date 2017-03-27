@@ -1,6 +1,7 @@
 import alias from 'rollup-plugin-alias'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
+import json from 'rollup-plugin-json'
 import babel from 'rollup-plugin-babel'
 import replace from 'rollup-plugin-replace'
 import babili from 'rollup-plugin-babili'
@@ -23,6 +24,7 @@ let plugs = [
     preferBuiltins: true
   }),
   commonjs(),
+  json(),
   babel({
     exclude: 'node_modules/**'
   })

@@ -1,8 +1,7 @@
 import Vue from 'vue'
-import fetch from 'unfetch'
+import combo from 'random-a11y-combo'
 import * as hero from '../'
 
-const patterns = []
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 const roundTo = (increment, number) => Math.round(number / increment) * increment
 const genAlpha = () => {
@@ -12,23 +11,21 @@ const genAlpha = () => {
   let num = roundTo(5, random(23, 102))
   return num === 100 ? 1 : parseFloat(`0.${num}`)
 }
+const setColor = obj => {
+  let colors = combo()
+  obj.colorOne = colors[0]
+  obj.colorTwo = colors[1]
+  obj.opacity = genAlpha()
+}
 
-// Could do this per-pattern but it felt wrong making 84 requests straight off the get-go
-fetch(`https://randoma11y.com/combos?page=${random(69, 420)}&per_page=${Object.keys(hero).length}`)
-  .then(r => r.json())
-  .then(json => {
-    let count = 0
-    for (let item in hero) {
-      let pattern = {}
-      pattern.colorOne = json[count].color_one
-      pattern.colorTwo = json[count].color_two
-      pattern.opacity = genAlpha()
-      pattern.fn = hero[item]
+const patterns = []
+for (let item in hero) {
+  let pattern = {}
+  setColor(pattern)
+  pattern.fn = hero[item]
 
-      patterns.push(pattern)
-      count++
-    }
-  })
+  patterns.push(pattern)
+}
 
 Vue.component('hero', {
   props: ['c1', 'c2', 'alpha', 'fn'],
@@ -59,14 +56,7 @@ Vue.component('hero', {
   },
   methods: {
     changeColor () {
-      let self = this
-      fetch(`https://randoma11y.com/combos?page=${random(69, 420)}&per_page=1`)
-        .then(r => r.json())
-        .then(json => {
-          self.colorOne = json[0].color_one
-          self.colorTwo = json[0].color_two
-          self.opacity = genAlpha()
-        })
+      setColor(this)
     }
   },
   template: `

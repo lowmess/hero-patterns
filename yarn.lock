@@ -1388,6 +1388,16 @@ cryptiles@2.x.x:
   dependencies:
     boom "2.x.x"
 
+css-color-list@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/css-color-list/-/css-color-list-0.0.1.tgz#8718e8695ae7a2cc8787be8715f1c008a7f28b15"
+  dependencies:
+    css-color-names "0.0.1"
+
+css-color-names@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.1.tgz#5d0548fa256456ede4a9a0c2ac7ab19d3eb1ad81"
+
 css-color-names@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.3.tgz#de0cef16f4d8aa8222a320d5b6d7e9bbada7b9f6"
@@ -2180,6 +2190,16 @@ get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
 
+get-contrast@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/get-contrast/-/get-contrast-2.0.0.tgz#c965497d258d4c23d03a06595485acc3d51ed6fb"
+  dependencies:
+    css-color-names "0.0.3"
+    is-blank "1.1.0"
+    is-named-css-color "1.0.0"
+    rgb "^0.1.0"
+    wcag-contrast "0.1.0"
+
 get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
@@ -2345,6 +2365,10 @@ hawk@~3.1.3:
     hoek "2.x.x"
     sntp "1.x.x"
 
+hex-rgb@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hex-rgb/-/hex-rgb-1.0.0.tgz#532275697cb9823e052429b184c6781d46cfdf49"
+
 hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
@@ -2490,6 +2514,20 @@ is-binary-path@^1.0.0:
   dependencies:
     binary-extensions "^1.0.0"
 
+is-blank@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-blank/-/is-blank-1.0.0.tgz#60e39beb41f92c3b27acbb5029cb0f29f983ee67"
+  dependencies:
+    is-empty "0.0.1"
+    is-whitespace "^0.3.0"
+
+is-blank@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-blank/-/is-blank-1.1.0.tgz#9274ddbd46363cb767075c385d4ab88c6a64dc17"
+  dependencies:
+    is-empty "0.0.1"
+    is-whitespace "^0.3.0"
+
 is-buffer@^1.0.2:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.5.tgz#1f3b26ef613b214b88cbca23cc6c01d87961eecc"
@@ -2503,6 +2541,10 @@ is-builtin-module@^1.0.0:
 is-dotfile@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-dotfile/-/is-dotfile-1.0.2.tgz#2c132383f39199f8edc268ca01b9b007d205cc4d"
+
+is-empty@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/is-empty/-/is-empty-0.0.1.tgz#09fdc3d649dda5969156c0853a9b76bd781c5a33"
 
 is-equal-shallow@^0.1.3:
   version "0.1.3"
@@ -2549,6 +2591,12 @@ is-my-json-valid@^2.10.0, is-my-json-valid@^2.12.4:
     jsonpointer "^4.0.0"
     xtend "^4.0.0"
 
+is-named-css-color@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-named-css-color/-/is-named-css-color-1.0.0.tgz#3b5f89bdc4a515ff4ed25714ffc64129a25599b7"
+  dependencies:
+    css-color-list "0.0.1"
+
 is-npm@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-npm/-/is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4"
@@ -2589,6 +2637,12 @@ is-plain-obj@^1.0.0:
 is-posix-bracket@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-posix-bracket/-/is-posix-bracket-0.1.1.tgz#3334dc79774368e92f016e6fbc0a88f5cd6e6bc4"
+
+is-present@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-present/-/is-present-1.0.0.tgz#29c9b8e8e6e786a594c292fc7239aa24be70b80c"
+  dependencies:
+    is-blank "1.0.0"
 
 is-primitive@^2.0.0:
   version "2.0.0"
@@ -2633,6 +2687,10 @@ is-typedarray@~1.0.0:
 is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
+
+is-whitespace@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/is-whitespace/-/is-whitespace-0.3.0.tgz#1639ecb1be036aec69a54cbb401cfbed7114ab7f"
 
 is-windows@^1.0.0:
   version "1.0.0"
@@ -3875,6 +3933,18 @@ query-string@^4.1.0:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
+random-a11y-combo@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/random-a11y-combo/-/random-a11y-combo-1.0.0.tgz#9451e715e19af8cf504c00ee73352eef20d603df"
+  dependencies:
+    get-contrast "^2.0.0"
+    is-present "^1.0.0"
+    random-hex-color "^1.0.0"
+
+random-hex-color@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/random-hex-color/-/random-hex-color-1.0.1.tgz#3518cbccf1ddd43cd6a9c054d6787a3c978b4751"
+
 randomatic@^1.1.3:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.6.tgz#110dcabff397e9dcff7c0789ccc0a49adf1ec5bb"
@@ -4050,6 +4120,10 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
+relative-luminance@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/relative-luminance/-/relative-luminance-0.0.0.tgz#5c56f75687ea722023fe4d96ea44683ccdf1fbfe"
+
 repeat-element@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/repeat-element/-/repeat-element-1.1.2.tgz#ef089a178d1483baae4d93eb98b4f9e4e11d990a"
@@ -4199,6 +4273,10 @@ rework@^1.0.1:
     convert-source-map "^0.3.3"
     css "^2.0.0"
 
+rgb@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/rgb/-/rgb-0.1.0.tgz#be27b291e8feffeac1bd99729721bfa40fc037b5"
+
 right-pad@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/right-pad/-/right-pad-1.0.1.tgz#8ca08c2cbb5b55e74dafa96bf7fd1a27d568c8d0"
@@ -4240,6 +4318,12 @@ rollup-plugin-commonjs@^8.0.2:
     resolve "^1.1.7"
     rollup-pluginutils "^2.0.1"
 
+rollup-plugin-json@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-json/-/rollup-plugin-json-2.1.0.tgz#7f8e1b2b156932dd934b938dc5547e4118d4121f"
+  dependencies:
+    rollup-pluginutils "^1.5.2"
+
 rollup-plugin-node-resolve@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-2.0.0.tgz#07e0ae94ac002a3ea36e8f33ca121d9f836b1309"
@@ -4256,7 +4340,7 @@ rollup-plugin-replace@^1.1.1:
     minimatch "^3.0.2"
     rollup-pluginutils "^1.5.0"
 
-rollup-pluginutils@^1.5.0:
+rollup-pluginutils@^1.5.0, rollup-pluginutils@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-1.5.2.tgz#1e156e778f94b7255bfa1b3d0178be8f5c552408"
   dependencies:
@@ -4915,10 +4999,6 @@ underscore@1.7.x:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
 
-unfetch@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-2.1.2.tgz#684fee4d8acdb135bdb26c0364c642fc326ca95b"
-
 uniq@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/uniq/-/uniq-1.0.1.tgz#b31c5ae8254844a3a8281541ce2b04b865a734ff"
@@ -4999,6 +5079,13 @@ vlq@^0.2.1:
 vue@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.2.5.tgz#528eba68447d7eff99f86767b31176aa656c6963"
+
+wcag-contrast@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/wcag-contrast/-/wcag-contrast-0.1.0.tgz#6ae37954e404941718eda1a1d8e270d9b5671934"
+  dependencies:
+    hex-rgb "~1.0.0"
+    relative-luminance "0.0.0"
 
 weinre@^2.0.0-pre-I0Z7U9OV:
   version "2.0.0-pre-I0Z7U9OV"
