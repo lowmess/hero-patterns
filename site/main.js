@@ -1,6 +1,6 @@
 import combos from 'combos'
-import { version } from '../package.json'
-import * as hero from '../'
+import { version } from 'package.json'
+import * as hero from 'hero-patterns'
 
 // Add version number to header
 document.querySelector('.version').innerHTML = `v${version}`

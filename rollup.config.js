@@ -6,7 +6,7 @@ import babel from 'rollup-plugin-babel'
 import babili from 'rollup-plugin-babili'
 import fs from 'fs-extra'
 import combo from 'random-a11y-combo'
-import * as hero from './index'
+import * as hero from './hero-patterns'
 
 // Do some preprocessing to make sure the build goes right.
 // Kind of gross to do it here,
@@ -32,8 +32,10 @@ fs.outputJsonSync('./dist/combos.json', combos)
 
 let plugs = [
   alias({
-    resolve: ['.json'],
-    combos: './../dist/combos'
+    resolve: ['.js', '.json'],
+    combos: './../dist/combos',
+    'package.json': './../package',
+    'hero-patterns': './../hero-patterns'
   }),
   resolve({
     main: true,
