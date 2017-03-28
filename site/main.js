@@ -17,7 +17,8 @@ const genAlpha = () => {
 
 const markup = fn => {
   // generate random color combination and opacity value
-  let [c1, c2] = combos[random(0, combos.length - 1)]
+  let [c1, c2] = combos[random(1, combos.length) - 1]
+  if (random(1, 2) === 1) [c1, c2] = [c2, c1]
   let alpha = genAlpha()
   // create strings from function name
   let name = fn.name.replace(/([A-Z])/g, ' $1')
