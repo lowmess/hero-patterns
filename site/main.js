@@ -1,5 +1,9 @@
 import combo from 'random-a11y-combo'
+import { version } from '../package.json'
 import * as hero from '../'
+
+// Add version number to header
+document.querySelector('.version').innerHTML = `v${version}`
 
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 const roundTo = (increment, number) => Math.round(number / increment) * increment
@@ -22,11 +26,11 @@ const markup = fn => {
   // generate actual markup
   let style = `background-position: center; background-color: ${c1}; background-image: ${fn(c2, alpha)}`
   let html = `
-    <div class="hero w-100 w-50-ns w-third-m w-25-l fl" id="${ident}">
+    <div class="hero w-100 w-50-ns w-third-m w-25-l fl" id="${ident}" role="presentation">
       <div class="hide-child aspect-ratio aspect-ratio--16x9" style="${style}">
         <div class="child absolute absolute--fill bg-black-70 flex flex-column items-center justify-center pa3">
-          <h3 class="white f5 f4-ns f3-l fw4 ttu tracked tc mt0 mb2">${name}</h3>
-          <code class="mt2 pv2 ph3 ba b--white br2 code white f5">${func}</code>
+          <span class="white f5 f4-ns f3-l fw4 ttu tracked tc mt0 mb2">${name}</span>
+          <code class="mt2 pv2 ph3 ba b--white br2 code white f6 f5-ns">${func}</code>
         </div>
       </div>
     </div>`
