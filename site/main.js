@@ -1,4 +1,4 @@
-import combo from 'random-a11y-combo'
+import combos from 'combos'
 import { version } from '../package.json'
 import * as hero from '../'
 
@@ -17,7 +17,7 @@ const genAlpha = () => {
 
 const markup = fn => {
   // generate random color combination and opacity value
-  let [c1, c2] = combo()
+  let [c1, c2] = combos[random(0, combos.length - 1)]
   let alpha = genAlpha()
   // create strings from function name
   let name = fn.name.replace(/([A-Z])/g, ' $1')
@@ -39,6 +39,6 @@ const markup = fn => {
   return template.content.firstElementChild
 }
 
-for (let item in hero) {
-  document.querySelector('.heroes').appendChild(markup(hero[item]))
+for (let pattern in hero) {
+  document.querySelector('.heroes').appendChild(markup(hero[pattern]))
 }

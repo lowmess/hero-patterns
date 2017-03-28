@@ -43,6 +43,7 @@
     "purifycss": "^1.1.9",
     "random-a11y-combo": "^1.0.0",
     "rollup": "^0.41.6",
+    "rollup-plugin-alias": "^1.2.1",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-babili": "^2.0.0",
     "rollup-plugin-commonjs": "^8.0.2",
