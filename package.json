@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Patterns from heropatterns.com exported as ES6 functions",
   "main": "index.js",
-  "engines": {
-    "node": "6.9.0"
-  },
   "scripts": {
     "start": "yarn run browser_sync & NODE_ENV=development nodemon --exec 'yarn run test && yarn run build && browser-sync reload'",
     "browser_sync": "browser-sync start --server dist --no-ui --no-notify",
