@@ -1,4 +1,4 @@
-import combos from 'combos'
+import colors from 'colors'
 import { version } from 'package.json'
 import * as hero from 'hero-patterns'
 
@@ -17,7 +17,7 @@ const genAlpha = () => {
 
 const markup = fn => {
   // generate random color combination and opacity value
-  let [c1, c2] = combos[random(1, combos.length) - 1]
+  let [c1, c2] = colors[random(1, colors.length) - 1]
   if (random(1, 2) === 1) [c1, c2] = [c2, c1]
   let alpha = genAlpha()
   // create strings from function name

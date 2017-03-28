@@ -5,6 +5,7 @@ import alias from 'rollup-plugin-alias'
 import babel from 'rollup-plugin-babel'
 import babili from 'rollup-plugin-babili'
 import fs from 'fs-extra'
+import randomColor from 'randomcolor'
 import combo from 'random-a11y-combo'
 import * as hero from './hero-patterns'
 
@@ -23,17 +24,18 @@ fs.copySync('./site/index.html', './dist/index.html')
 // this can make the build hang but speeds up the site tremendously
 let combos = []
 let num = process.env.NODE_ENV === 'production' ? Object.keys(hero).length * 10 : 69
-for (let i = num; i--;) {
-  combos.push(combo())
+let colors = randomColor({ count: num })
+for (let color of colors) {
+  combos.push(combo(color))
 }
-fs.outputJsonSync('./dist/combos.json', combos)
+fs.outputJsonSync('./dist/colors.json', combos)
 
 // OK now on to the actual Rollup stuff
 
 let plugs = [
   alias({
     resolve: ['.js', '.json'],
-    combos: './../dist/combos',
+    colors: './../dist/colors',
     'package.json': './../package',
     'hero-patterns': './../hero-patterns'
   }),
