@@ -29,10 +29,10 @@ import * as hero from 'hero-patterns'
 // set fill & opacity
 document.querySelector('.tech').style.backgroundImage = hero.circuitBoard('#bada55', 0.5)
 
-// use default opacity (0.8)
+// set fill with full opacity
 document.querySelector('.milkshake').style.backgroundImage = hero.iLikeFood('#c0ff33')
 
-// use default fill (#000) & opacity (0.8)
+// use default fill (#000) & opacity (1)
 document.querySelector('.dark-side').style.backgroundImage = hero.deathStar()
 ```
 
