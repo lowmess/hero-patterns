@@ -27,8 +27,8 @@ const markup = fn => {
   // generate actual markup
   let style = `background-position: center; background-color: ${c1}; background-image: ${fn(c2, alpha)}`
   let html = `
-    <div class="hero w-100 w-50-ns w-third-m w-25-l fl" id="${ident}" role="presentation">
-      <div class="hide-child aspect-ratio aspect-ratio--16x9" style="${style}">
+    <div class="hero w-100 w-50-ns w-third-m w-25-l fl aspect-ratio" id="${ident}" role="presentation">
+      <div class="hide-child aspect-ratio--object aspect-ratio--16x9" style="${style}">
         <div class="child absolute absolute--fill bg-black-70 flex flex-column items-center justify-center pa3">
           <span class="white f5 f4-ns f3-l fw4 ttu tracked tc mt0 mb2">${name}</span>
           <code class="mt2 pv2 ph3 ba b--white br2 code white f6 f5-ns">${func}</code>
