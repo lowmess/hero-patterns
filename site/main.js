@@ -1,12 +1,13 @@
 import colors from 'colors'
-import { version } from 'package.json'
+import {version} from 'package.json'
 import * as hero from 'hero-patterns'
 
 // Add version number to header
 document.querySelector('.version').innerHTML = `v${version}`
 
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
-const roundTo = (increment, number) => Math.round(number / increment) * increment
+const roundTo = (increment, number) =>
+  Math.round(number / increment) * increment
 const genAlpha = () => {
   // using 102 instead of 100 for the upper range
   // gives us a slightly larger chance of returning 1

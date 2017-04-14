@@ -23,8 +23,10 @@ fs.copySync('./site/index.html', './dist/index.html')
 // pre-generate color combinations
 // this can make the build hang but speeds up the site tremendously
 let combos = []
-let num = process.env.NODE_ENV === 'production' ? Object.keys(hero).length * 10 : 69
-let colors = randomColor({ count: num })
+let num = process.env.NODE_ENV === 'production'
+  ? Object.keys(hero).length * 10
+  : 69
+let colors = randomColor({count: num})
 for (let color of colors) {
   combos.push(combo(color))
 }
