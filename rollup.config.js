@@ -26,7 +26,7 @@ let combos = []
 let num = process.env.NODE_ENV === 'production'
   ? Object.keys(hero).length * 10
   : 69
-let colors = randomColor({count: num})
+let colors = randomColor({ count: num })
 for (let color of colors) {
   combos.push(combo(color))
 }

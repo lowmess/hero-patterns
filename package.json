@@ -9,7 +9,8 @@
     "build": "rollup -c -m && postcss site/main.css -o dist/bundle.css -c",
     "build:min": "cross-env NODE_ENV=production yarn run build && purifycss dist/bundle.css dist/index.html dist/bundle.js --out dist/bundle.css --min --info",
     "lint-staged": "lint-staged",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "format": "prettier --single-quote --semi false --write 'site/*.js'"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,7 @@
     "postcss-custom-properties": "^5.0.2",
     "postcss-import": "^9.1.0",
     "postcss-nested": "^1.0.0",
-    "prettier-standard": "^3.0.1",
+    "prettier": "^1.1.0",
     "purifycss": "^1.1.9",
     "random-a11y-combo": "^1.0.0",
     "randomcolor": "^0.4.4",
@@ -61,7 +62,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier-standard",
+      "prettier --single-quote --semi false --write",
       "git add"
     ],
     "*.css": "stylelint"

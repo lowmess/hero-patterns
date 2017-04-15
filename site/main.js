@@ -1,5 +1,5 @@
 import colors from 'colors'
-import {version} from 'package.json'
+import { version } from 'package.json'
 import * as hero from 'hero-patterns'
 
 // Add version number to header
