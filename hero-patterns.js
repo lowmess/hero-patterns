@@ -1,3 +1,4 @@
+export { formalInvitation } from './patterns/formal-invitation'
 export { topography } from './patterns/topography'
 export { texture } from './patterns/texture'
 export { jupiter } from './patterns/jupiter'
