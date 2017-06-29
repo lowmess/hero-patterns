@@ -12,8 +12,7 @@ const genAlpha = () => {
   // using 102 instead of 100 for the upper range
   // gives us a slightly larger chance of returning 1
   // the same holds true for using 23 for the lower range
-  const num = roundTo(5, random(23, 102))
-  return num / 100
+  return roundTo(5, random(23, 102)) / 100
 }
 
 const markup = fn => {
