@@ -13,7 +13,7 @@ const genAlpha = () => {
   // gives us a slightly larger chance of returning 1
   // the same holds true for using 23 for the lower range
   const num = roundTo(5, random(23, 102))
-  return num === 100 ? 1 : parseFloat(`0.${num}`)
+  return num / 100
 }
 
 const markup = fn => {
