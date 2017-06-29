@@ -12,7 +12,7 @@ const genAlpha = () => {
   // using 102 instead of 100 for the upper range
   // gives us a slightly larger chance of returning 1
   // the same holds true for using 23 for the lower range
-  let num = roundTo(5, random(23, 102))
+  const num = roundTo(5, random(23, 102))
   return num === 100 ? 1 : parseFloat(`0.${num}`)
 }
 
@@ -20,15 +20,15 @@ const markup = fn => {
   // generate random color combination and opacity value
   let [c1, c2] = colors[random(1, colors.length) - 1]
   if (random(1, 2) === 1) [c1, c2] = [c2, c1]
-  let alpha = genAlpha()
+  const alpha = genAlpha()
   // create strings from function name
-  let name = fn.name.replace(/([A-Z])/g, ' $1')
-  let ident = fn.name.replace(/([A-Z])/g, '-$1').toLowerCase()
-  let params = alpha === 1 ? `'${c2}'` : `'${c2}', ${alpha}`
-  let func = `${fn.name}(${params})`
+  const name = fn.name.replace(/([A-Z])/g, ' $1')
+  const ident = fn.name.replace(/([A-Z])/g, '-$1').toLowerCase()
+  const params = alpha === 1 ? `'${c2}'` : `'${c2}', ${alpha}`
+  const func = `${fn.name}(${params})`
   // generate actual markup
-  let style = `background-position: center; background-color: ${c1}; background-image: ${fn(c2, alpha)}`
-  let html = `
+  const style = `background-position: center; background-color: ${c1}; background-image: ${fn(c2, alpha)}`
+  const html = `
     <div class="hero w-100 w-50-ns w-third-m w-25-l fl" id="${ident}" role="presentation">
       <div class="hide-child aspect-ratio aspect-ratio--16x9" style="${style}">
         <div class="child aspect-ratio--object bg-black-70 flex flex-column items-center justify-center pa3">
@@ -37,11 +37,11 @@ const markup = fn => {
         </div>
       </div>
     </div>`
-  let template = document.createElement('template')
+  const template = document.createElement('template')
   template.innerHTML = html
   return template.content.firstElementChild
 }
 
-for (let pattern in hero) {
+for (const pattern in hero) {
   document.querySelector('.heroes').appendChild(markup(hero[pattern]))
 }

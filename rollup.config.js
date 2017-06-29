@@ -22,19 +22,19 @@ if (!fs.existsSync('dist')) fs.mkdirSync('dist')
 fs.copySync('./site/index.html', './dist/index.html')
 // pre-generate color combinations
 // this can make the build hang but speeds up the site tremendously
-let combos = []
-let num = process.env.NODE_ENV === 'production'
+const combos = []
+const num = process.env.NODE_ENV === 'production'
   ? Object.keys(hero).length * 10
   : 69
-let colors = randomColor({ count: num })
-for (let color of colors) {
+const colors = randomColor({ count: num })
+for (const color of colors) {
   combos.push(combo(color))
 }
 fs.outputJsonSync('./dist/colors.json', combos)
 
 // OK now on to the actual Rollup stuff
 
-let plugs = [
+const plugs = [
   alias({
     resolve: ['.js', '.json'],
     colors: './../dist/colors',
