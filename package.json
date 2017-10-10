@@ -1,14 +1,13 @@
 {
   "name": "hero-patterns",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Patterns from heropatterns.com exported as ES6 functions",
   "main": "hero-patterns.js",
   "scripts": {
     "start": "yarn run browser_sync & NODE_ENV=development nodemon --exec 'yarn run build && browser-sync reload'",
     "browser_sync": "browser-sync start --server dist --no-ui --no-notify",
     "build": "rollup -c -m && postcss site/main.css -o dist/bundle.css -c",
-    "build:min":
-      "cross-env NODE_ENV=production yarn run build && purifycss dist/bundle.css dist/index.html dist/bundle.js --out dist/bundle.css --min --info",
+    "build:min": "cross-env NODE_ENV=production yarn run build && purifycss dist/bundle.css dist/index.html dist/bundle.js --out dist/bundle.css --min --info",
     "lint-staged": "lint-staged",
     "precommit": "lint-staged"
   },
@@ -55,10 +54,21 @@
     "stylelint-config-lowmess": "^0.2.0",
     "tachyons": "^4.6.2"
   },
-  "browserlist": ["last 2 versions", "> 5%"],
+  "browserlist": [
+    "last 2 versions",
+    "> 5%"
+  ],
   "lint-staged": {
-    "*.js": ["eslint --fix", "prettier --write", "git add"],
-    "*.css": ["stylelint --fix", "prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write",
+      "git add"
+    ]
   },
   "config": {
     "commitizen": {
