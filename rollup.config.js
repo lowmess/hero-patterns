@@ -1,6 +1,6 @@
 import path from 'path'
 import babel from 'rollup-plugin-babel'
-import babili from 'rollup-plugin-babili'
+import minify from 'rollup-plugin-babel-minify'
 
 const pkg = require(path.resolve(process.cwd(), './package.json'))
 
@@ -8,7 +8,7 @@ const plugs = [[babel()]]
 
 if (process.env.NODE_ENV === 'production') {
   plugs.push(
-    babili({
+    minify({
       comments: false,
     })
   )
