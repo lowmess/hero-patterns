@@ -1,2 +1,10 @@
 www
 src
+.babelrc
+.eslintignore
+.eslintrc
+.nvmrc
+.prettierignore
+.prettierrc
+rollup.config.js
+yarn.lock
