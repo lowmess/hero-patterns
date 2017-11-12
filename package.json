@@ -7,8 +7,8 @@
   "scripts": {
     "bundle": "rollup -c",
     "bundle:min": "cross-env NODE_ENV=production rollup -c",
-    "prepublishOnly": "npm run bundle:min",
-    "precommit": "npm run bundle:min && lint-staged"
+    "prepublishOnly": "yarn run bundle:min",
+    "precommit": "yarn run bundle:min && lint-staged"
   },
   "repository": {
     "type": "git",
