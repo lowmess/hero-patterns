@@ -36,4 +36,4 @@ document.querySelector('.milkshake').style.backgroundImage = hero.iLikeFood('#c0
 document.querySelector('.dark-side').style.backgroundImage = hero.deathStar()
 ```
 
-For (slightly) more advanced usage, see [the code I used to generate the previews on the demo page](./site/main.js).
+For (slightly) more advanced usage, see [the code I used to generate the previews on the demo page](./www/src/main.js).
