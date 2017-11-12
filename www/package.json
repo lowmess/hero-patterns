@@ -9,7 +9,7 @@
     "start": "webpack-dev-server",
     "prebuild": "node generate-colors",
     "build": "webpack",
-    "prebuild:min": "node generate-colors",
+    "prebuild:min": "cross-env NODE_ENV=production node generate-colors",
     "build:min": "cross-env NODE_ENV=production webpack -p",
     "precommit": "lint-staged"
   },
