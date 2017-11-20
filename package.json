@@ -8,7 +8,9 @@
     "bundle": "rollup -c",
     "bundle:min": "cross-env NODE_ENV=production rollup -c",
     "prepublishOnly": "yarn run bundle:min",
-    "precommit": "yarn run bundle:min && lint-staged"
+    "precommit": "yarn run bundle:min && lint-staged",
+    "site:build": "cd www && yarn && yarn run build:min",
+    "site:dev": "cd www && yarn && yarn start"
   },
   "repository": {
     "type": "git",
@@ -32,15 +34,8 @@
     "lint-staged": "^5.0.0",
     "prettier": "^1.8.2"
   },
-  "browserlist": [
-    "last 2 versions",
-    "> 5%"
-  ],
+  "browserlist": ["last 2 versions", "> 5%"],
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["eslint --fix", "prettier --write", "git add"]
   }
 }
