@@ -9,7 +9,7 @@
     "bundle:min": "cross-env NODE_ENV=production rollup -c",
     "prepublishOnly": "yarn run bundle:min",
     "precommit": "yarn run bundle:min && lint-staged",
-    "site:build": "cd www && yarn && yarn run build:min",
+    "site:build": "yarn run bundle:min && cd www && yarn && yarn run build:min",
     "site:dev": "cd www && yarn && yarn start"
   },
   "repository": {
