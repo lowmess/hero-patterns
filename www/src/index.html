@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Patterns from heropatterns.com, as JavaScript functions.">
-    <title>hero-patterns.js</title>
-  </head>
-  <body class="sans-serif min-vh-100 dark-gray">
-    <header class="pa4">
-      <nav class="flex-ns justify-between-ns items-center-ns">
-        <div class="flex-none-ns flex items-center mb2 mb0-ns">
-          <h1 class="f3 fw4 mv0 mr2">hero-patterns.js</h1>
-          <span class="version silver fw3"></span>
-        </div>
-        <ul class="list tr-ns pl0 mv0">
-          <li class="di mr3"><a class="link" href="https://github.com/lowmess/hero-patterns">GitHub</a></li>
-          <li class="di mr3"><a class="link" href="https://www.npmjs.com/package/hero-patterns">NPM</a></li>
-          <li class="di"><a class="link" href="http://heropatterns.com">Patterns</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div class="cf heroes"></div>
-      <div class="pa4 lh-copy">
-        <h2 class="f3 fw4 mv3">Installation</h2>
-        <pre class="pre ba b--black-10 br2 bg-light-gray pa3"><code class="language-bash code">yarn add hero-patterns</code></pre>
-        <h2 class="f3 fw4 mb3 mt4">Usage</h2>
-        <pre class="pre ba b--black-10 br2 bg-light-gray pa3"><code class="language-js code">import * as hero from 'hero-patterns'
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Patterns from heropatterns.com, as JavaScript functions.">
+  <title>hero-patterns.js</title>
+</head>
+
+<body class="sans-serif min-vh-100 dark-gray">
+  <header class="pa4">
+    <nav class="flex-ns justify-between-ns items-center-ns">
+      <div class="flex-none-ns flex items-center mb2 mb0-ns">
+        <h1 class="f3 fw4 mv0 mr2">hero-patterns.js</h1>
+        <span class="version silver fw3"></span>
+      </div>
+      <ul class="list tr-ns pl0 mv0">
+        <li class="di mr3">
+          <a class="link" href="https://github.com/lowmess/hero-patterns">GitHub</a>
+        </li>
+        <li class="di mr3">
+          <a class="link" href="https://www.npmjs.com/package/hero-patterns">NPM</a>
+        </li>
+        <li class="di">
+          <a class="link" href="http://heropatterns.com">Patterns</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="cf heroes"></div>
+    <div class="pa4 lh-copy">
+      <h2 class="f3 fw4 mv3">Installation</h2>
+      <pre class="pre ba b--black-10 br2 bg-light-gray pa3"><code class="language-bash code">yarn add hero-patterns</code></pre>
+      <h2 class="f3 fw4 mb3 mt4">Usage</h2>
+      <pre class="pre ba b--black-10 br2 bg-light-gray pa3"><code class="language-js code">import * as hero from 'hero-patterns'
 
 // set fill & opacity
 document.querySelector('.tech').style.backgroundImage = hero.circuitBoard('#bada55', 0.5)
@@ -36,24 +44,42 @@ document.querySelector('.milkshake').style.backgroundImage = hero.iLikeFood('#c0
 
 // use default fill (#000) & opacity (1)
 document.querySelector('.dark-side').style.backgroundImage = hero.deathStar()</code></pre>
-        <p>For (slightly) more advanced usage, you can see <a href="https://github.com/lowmess/hero-patterns/blob/master/www/src/main.js" class="link">the code I used to generate the previews above</a>.
-      </div>
-    </main>
-    <footer class="pv3 ph4 lh-copy">
-      <p class="mv3">Made by <a class="link fw5" href="https://github.com/lowmess">@lowmess</a></p>
-      <p class="mv3">Patterns by <a class="link fw5" href="https://twitter.com/steveschoger">@steveschoger</a></p>
-      <p class="mv3">Deploys by <a class="link fw5" href="https://netlify.com">Netlify</a></p>
-      <div class="mv3">
-        <span>Links</span>
-        <ul class="list di ml2 mv0 pa0">
-          <li class="di mr2"><a class="link fw5" href="https://github.com/lowmess/hero-patterns">GitHub</a></li>
-          <li class="di mr2"><a class="link fw5" href="https://www.npmjs.com/package/hero-patterns">NPM</a></li>
-          <li class="di mr2"><a class="link fw5" href="http://heropatterns.com">Patterns</a></li>
-          <li class="di mr2"><a class="link fw5" href="http://tachyons.io">Tachyons</a></li>
-          <li class="di"><a class="link fw5" href="https://randoma11y.com">Random a11y</a></li>
-        </ul>
-      </div>
-    </footer>
-    <script src="/bundle.js"></script>
-  </body>
+      <p>For (slightly) more advanced usage, you can see
+        <a href="https://github.com/lowmess/hero-patterns/blob/master/www/src/main.js"
+          class="link">the code I used to generate the previews above</a>.
+    </div>
+  </main>
+  <footer class="pv3 ph4 lh-copy">
+    <p class="mv3">Made by
+      <a class="link fw5" href="https://github.com/lowmess">@lowmess</a>
+    </p>
+    <p class="mv3">Patterns by
+      <a class="link fw5" href="https://twitter.com/steveschoger">@steveschoger</a>
+    </p>
+    <p class="mv3">Deploys by
+      <a class="link fw5" href="https://netlify.com">Netlify</a>
+    </p>
+    <div class="mv3">
+      <span>Links</span>
+      <ul class="list di ml2 mv0 pa0">
+        <li class="di mr2">
+          <a class="link fw5" href="https://github.com/lowmess/hero-patterns">GitHub</a>
+        </li>
+        <li class="di mr2">
+          <a class="link fw5" href="https://www.npmjs.com/package/hero-patterns">NPM</a>
+        </li>
+        <li class="di mr2">
+          <a class="link fw5" href="http://heropatterns.com">Patterns</a>
+        </li>
+        <li class="di mr2">
+          <a class="link fw5" href="http://tachyons.io">Tachyons</a>
+        </li>
+        <li class="di">
+          <a class="link fw5" href="https://randoma11y.com">Random a11y</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>
