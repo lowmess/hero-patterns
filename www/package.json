@@ -10,8 +10,7 @@
     "prebuild": "node generate-colors",
     "build": "webpack",
     "prebuild:min": "cross-env NODE_ENV=production node generate-colors",
-    "build:min": "cross-env NODE_ENV=production webpack -p",
-    "precommit": "lint-staged"
+    "build:min": "cross-env NODE_ENV=production webpack -p"
   },
   "dependencies": {
     "autoprefixer": "^7.1.6",
@@ -38,8 +37,6 @@
   "devDependencies": {
     "eslint": "3.19.0",
     "eslint-config-lowmess": "1.1.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^5.0.0",
     "prettier": "^1.8.2",
     "stylelint": "8.1.1",
     "stylelint-config-lowmess": "0.2.0",
@@ -48,17 +45,5 @@
   "browserslist": [
     "last 2 versions",
     "> 5%"
-  ],
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ],
-    "*.css": [
-      "stylelint --fix",
-      "prettier --write",
-      "git add"
-    ]
-  }
+  ]
 }
