@@ -4,7 +4,7 @@ import minify from 'rollup-plugin-babel-minify'
 
 const pkg = require(path.resolve(process.cwd(), './package.json'))
 
-const plugs = [[babel()]]
+const plugs = [babel()]
 
 if (process.env.NODE_ENV === 'production') {
   plugs.push(
