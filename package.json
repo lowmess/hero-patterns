@@ -1,6 +1,6 @@
 {
   "name": "hero-patterns",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Patterns from heropatterns.com",
   "main": "dist/hero-patterns.cjs.js",
   "module": "dist/hero-patterns.es.js",
