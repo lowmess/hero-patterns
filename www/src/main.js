@@ -1,7 +1,8 @@
-import colors from 'colors'
 import { version } from 'package.json'
 import * as hero from 'hero-patterns'
+import colors from './colors'
 
+import 'tachyons'
 import './main.css'
 
 // Add version number to header

@@ -6,45 +6,40 @@
   "author": "Alec Lomas",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
-    "prebuild": "node generate-colors",
-    "build": "webpack",
-    "prebuild:min": "cross-env NODE_ENV=production node generate-colors",
-    "build:min": "cross-env NODE_ENV=production webpack -p"
+    "start": "parcel src/index.html --out-dir public",
+    "build": "parcel build src/index.html --out-dir public",
+    "build:min": "cross-env NODE_ENV=production parcel build src/index.html --out-dir public"
   },
   "dependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "autoprefixer": "^7.1.6",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
+    "babel-plugin-preval": "^3.0.1",
     "cross-env": "^5.1.1",
-    "css-loader": "^0.28.7",
     "css-mqpacker": "^6.0.1",
     "cssnano": "^3.10.0",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "fs-extra": "^4.0.2",
-    "html-webpack-plugin": "^2.30.1",
     "postcss": "^6.0.14",
     "postcss-custom-media": "^6.0.0",
     "postcss-import": "^11.0.0",
-    "postcss-loader": "^2.0.8",
     "postcss-nested": "^2.1.2",
     "random-a11y-combo": "^1.0.0",
     "randomcolor": "^0.5.3",
-    "style-loader": "^0.19.0",
-    "tachyons": "^4.9.0",
-    "webpack": "^3.8.1"
+    "tachyons": "^4.9.0"
   },
   "devDependencies": {
     "eslint": "3.19.0",
     "eslint-config-lowmess": "1.1.0",
+    "parcel-bundler": "^1.10.3",
     "prettier": "^1.8.2",
     "stylelint": "8.1.1",
-    "stylelint-config-lowmess": "0.2.0",
-    "webpack-dev-server": "^2.9.4"
+    "stylelint-config-lowmess": "0.2.0"
   },
   "browserslist": [
     "last 2 versions",
     "> 5%"
-  ]
+  ],
+  "alias": {
+    "hero-patterns": "../src/hero-patterns.js",
+    "package.json": "../package.json"
+  }
 }

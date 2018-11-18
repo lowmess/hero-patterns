@@ -1,6 +1,7 @@
 {
+  "plugins": ["preval"],
   "presets": [
-    ["env", {
+    ["@babel/preset-env", {
       "modules": false
     }]
   ]
