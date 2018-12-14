@@ -16,12 +16,9 @@
     "autoprefixer": "^7.1.6",
     "babel-plugin-preval": "^3.0.1",
     "cross-env": "^5.1.1",
-    "css-mqpacker": "^6.0.1",
+    "css-mqpacker": "^7.0.0",
     "cssnano": "^3.10.0",
     "postcss": "^6.0.14",
-    "postcss-custom-media": "^6.0.0",
-    "postcss-import": "^11.0.0",
-    "postcss-nested": "^2.1.2",
     "random-a11y-combo": "^1.0.0",
     "randomcolor": "^0.5.3",
     "tachyons": "^4.9.0"
