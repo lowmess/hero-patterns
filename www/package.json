@@ -32,10 +32,6 @@
     "stylelint": "8.1.1",
     "stylelint-config-lowmess": "0.2.0"
   },
-  "browserslist": [
-    "last 2 versions",
-    "> 5%"
-  ],
   "alias": {
     "hero-patterns": "../src/hero-patterns.js",
     "package.json": "../package.json"
