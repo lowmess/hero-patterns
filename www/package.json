@@ -27,6 +27,7 @@
     "tachyons": "^4.9.0"
   },
   "devDependencies": {
+    "@abide-community/parcel-plugin-clean-out-dir": "^1.0.0",
     "eslint": "3.19.0",
     "eslint-config-lowmess": "1.1.0",
     "parcel-bundler": "^1.10.3",

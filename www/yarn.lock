@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@abide-community/parcel-plugin-clean-out-dir@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@abide-community/parcel-plugin-clean-out-dir/-/parcel-plugin-clean-out-dir-1.0.0.tgz#cfed00dd9d674fd89b9118db8d0f87c503301680"
+  integrity sha512-vhWtO04CEW7nAUK9GagbaI1sq0kRpIwWMpM2eawWl0vnNqOv3Qn0Ru16jLXVEF1kmA4rvddzKwLu2N8YbtsP8w==
+  dependencies:
+    del "^3.0.0"
+
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -2339,6 +2346,18 @@ del@^2.0.2:
     pinkie-promise "^2.0.0"
     rimraf "^2.2.8"
 
+del@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/del/-/del-3.0.0.tgz#53ecf699ffcbcb39637691ab13baf160819766e5"
+  integrity sha1-U+z2mf/LyzljdpGrE7rxYIGXZuU=
+  dependencies:
+    globby "^6.1.0"
+    is-path-cwd "^1.0.0"
+    is-path-in-cwd "^1.0.0"
+    p-map "^1.1.1"
+    pify "^3.0.0"
+    rimraf "^2.2.8"
+
 delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
@@ -4531,6 +4550,11 @@ osenv@^0.1.4:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
+
+p-map@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/p-map/-/p-map-1.2.0.tgz#e4e94f311eabbc8633a1e79908165fca26241b6b"
+  integrity sha512-r6zKACMNhjPJMTl8KcFH4li//gkrXWfbD6feV8l6doRHlzljFWGJ2AP6iKaCJXyZmAUMOPtvbW7EXkbWO/pLEA==
 
 pako@^0.2.5, pako@~0.2.0:
   version "0.2.9"
