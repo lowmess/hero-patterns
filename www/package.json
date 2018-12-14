@@ -13,11 +13,11 @@
   "dependencies": {
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
-    "autoprefixer": "^7.1.6",
+    "autoprefixer": "^9.4.2",
     "babel-plugin-preval": "^3.0.1",
     "cross-env": "^5.1.1",
     "css-mqpacker": "^7.0.0",
-    "cssnano": "^3.10.0",
+    "cssnano": "^4.1.7",
     "postcss": "^6.0.14",
     "random-a11y-combo": "^1.0.0",
     "randomcolor": "^0.5.3",
