@@ -34,7 +34,7 @@ const markup = name => {
   // generate actual markup
   const style = `background-position: center; background-color: ${c1}; background-image: ${hero[name](c2, alpha)}`
   const html = `
-    <div class="hero w-100 w-50-ns w-third-m w-25-l fl" id="${id}" role="presentation">
+    <div class="hero" id="${id}" role="presentation">
       <div class="hide-child aspect-ratio aspect-ratio--16x9" style="${style}">
         <div class="child aspect-ratio--object bg-black-70 flex flex-column items-center justify-center pa3">
           <span class="white f5 f4-ns f3-l fw4 ttu tracked tc mt0 mb2">${formatName}</span>
