@@ -1,7 +1,20 @@
 @charset 'utf-8';
 
-@import 'tachyons/src/tachyons';
+@media (min-width: 48em) {
+  .heroes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-@custom-media --breakpoint-not-small screen and (min-width: 48em);
-@custom-media --breakpoint-medium screen and (min-width: 72em);
-@custom-media --breakpoint-large screen and (min-width: 96em);
+@media (min-width: 72em) {
+  .heroes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 96em) {
+  .heroes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

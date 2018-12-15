@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "autoprefixer": {},
+    "cssnano": {},
+    "css-mqpacker": {}
+  },
+  "map": {
+    "inline": false
+  }
+}
