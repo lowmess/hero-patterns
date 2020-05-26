@@ -9,7 +9,7 @@
     "bundle:min": "cross-env NODE_ENV=production rollup -c",
     "prepublishOnly": "npm run bundle:min",
     "precommit": "npm run bundle:min && lint-staged",
-    "site:build": "npm run bundle:min && cd www && npm && npm run build:min",
+    "site:build": "npm run bundle:min && cd www && npm i && npm run build:min",
     "site:dev": "cd www && npm && npm start"
   },
   "repository": {
