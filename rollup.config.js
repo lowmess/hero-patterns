@@ -1,24 +1,32 @@
 import path from 'path'
-import babel from 'rollup-plugin-babel'
+import babel from '@rollup/plugin-babel'
 import minify from 'rollup-plugin-babel-minify'
 
 const pkg = require(path.resolve(process.cwd(), './package.json'))
 
-const plugs = [babel()]
+const plugins = [babel()]
 
 if (process.env.NODE_ENV === 'production') {
-  plugs.push(
+  plugins.push(
     minify({
       comments: false,
     })
   )
 }
 
-const config = {
-  entry: './src/hero-patterns.js',
-  sourceMap: true,
-  plugins: plugs,
-  targets: [{ dest: pkg.main, format: 'cjs' }, { dest: pkg.module, format: 'es' }],
+export default {
+  input: './src/hero-patterns.js',
+  plugins,
+  output: [
+    {
+      file: pkg.main,
+      format: 'cjs',
+      sourcemap: true,
+    },
+    {
+      file: pkg.module,
+      format: 'es',
+      sourcemap: true,
+    },
+  ],
 }
-
-export default config
