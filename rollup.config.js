@@ -1,17 +1,13 @@
 import path from 'path'
 import babel from '@rollup/plugin-babel'
-import minify from 'rollup-plugin-babel-minify'
+import { terser } from 'rollup-plugin-terser'
 
 const pkg = require(path.resolve(process.cwd(), './package.json'))
 
 const plugins = [babel()]
 
 if (process.env.NODE_ENV === 'production') {
-  plugins.push(
-    minify({
-      comments: false,
-    })
-  )
+  plugins.push(terser())
 }
 
 export default {
